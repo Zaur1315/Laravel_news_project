@@ -11,7 +11,7 @@ class Comment extends Model
 
     protected $fillable = ['subject', 'body', 'article_id'];
 
-    public function  article(){
+    public function article() {
         return $this->belongsTo(Article::class);
     }
 

@@ -13,15 +13,15 @@ class Article extends Model
 
 //    protected $guarded = [];
 
-    public function comments(){
+    public function comments() {
         return $this->hasMany(Comment::class);
     }
 
-    public function state(){
+    public function state() {
         return $this->hasOne(State::class);
     }
 
-    public function tags(){
+    public function tags() {
         return $this->belongsToMany(Tag::class);
     }
 

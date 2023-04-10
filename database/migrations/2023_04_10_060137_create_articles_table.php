@@ -9,15 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+//            $table->bigIncrements('id');
             $table->string('title')->unique();
-            $table->string('stug')->unique();
-            $table->text('body')->unique();
-            $table->string('img')->unique();
+            $table->string('slug')->unique();
+            $table->text('body');
+            $table->string('img');
+//            $table->timestamp('published_at');
             $table->timestamps();
+            // created_at
+            // updated_at
         });
     }
 
